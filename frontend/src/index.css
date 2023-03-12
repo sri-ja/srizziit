@@ -1,0 +1,226 @@
+body {
+	background-color: #c9c5e3;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100%;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+.home .user-data {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 1rem;
+	border-radius: 5px;
+}
+.home .user-data .field {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+.home .user-data .field .value {
+	padding: 0.25rem;
+	width: 100%;
+	border-radius: 5px;
+	color: #000;
+	font-size: 1.5rem;
+	transition: all 0.3s ease;
+}
+.home .user-data .field .value:disabled {
+	border: 1px solid transparent;
+	background: transparent;
+}
+.home .user-data .field .value:enabled {
+	background: transparent;
+	border: 1px solid purple;
+	border-radius: 5px;
+	color: purple;
+}
+.home .user-data .edit-button {
+	width: 100%;
+	border: 1px #000 solid;
+	border-radius: 5px;
+	padding: 0.3rem;
+	color: #000;
+	background-color: transparent;
+}
+.flex {
+	display: flex;
+}
+.justify-center {
+	justify-content: center;
+}
+.align-center {
+	align-items: center;
+}
+.space-between {
+	justify-content: space-between;
+}
+.space-around {
+	justify-content: space-around;
+}
+.w-700 {
+	width: 700px;
+}
+.mx-auto {
+	margin: 0 auto;
+}
+
+.modal-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: #eee;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 4px;
+}
+.follow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.1rem;
+	margin-bottom: -0.5rem;
+}
+.new-sub {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.1rem;
+	margin-bottom: -0.5rem;
+	flex-direction: column;
+}
+
+.new-sub .sub {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.sub-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.sub-card {
+	background: rgb(212, 150, 250);
+	word-wrap: break-word;
+
+	width: 65%;
+	padding: 1rem;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+	overflow: hidden;
+
+	margin-bottom: 1rem;
+}
+.sub-card-heading {
+	font-size: 1.3rem;
+	font-weight: 600;
+	overflow: hidden;
+	width: 100%;
+	padding-left: 20px;
+}
+.sub-card-content {
+	font-size: 1.2rem;
+	text-align: right;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	padding-right: 20px;
+}
+.sub-other-card {
+	background: rgb(212, 150, 250);
+	word-wrap: break-word;
+	padding: 1rem;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+	overflow: hidden;
+
+	margin-bottom: 1rem;
+}
+.w-100 {
+	width: 100%;
+}
+
+.disable-color:focus {
+	background-color: transparent;
+}
+
+.comments-container {
+	height: 50vh;
+	overflow-y: auto;
+}
+
+.search-result {
+	display: block;
+	padding: 0.5rem;
+	color: white;
+	background-color: rgb(169, 59, 238);
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+	width: 100%;
+	max-width: 500px;
+}
+
+.search-result:hover {
+	box-shadow: unset;
+}
+
+.search-results {
+	z-index: 1;
+	position: absolute;
+	max-height: 50vh;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	left: 0;
+}
+
+.filters {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 8rem;
+	text-align: center;
+}
+.sorts {
+	position: fixed;
+	bottom: 10px;
+	left: 150px;
+	width: 8rem;
+	text-align: center;
+}
+.filters > div,
+.sorts > div {
+	width: 100%;
+}
